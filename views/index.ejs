@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/__head') %>
+    <div class="container">
+        <% if (messages.success) { %>
+            <div class="alert alert-info" role="alert">
+                <%- messages.success %>    
+            </div>
+        <% } %>
+        <% if (messages.error) { %>
+            <div class="alert alert-danger" role="alert">
+                <%- messages.error %>    
+            </div>
+        <% } %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
