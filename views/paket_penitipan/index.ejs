@@ -11,12 +11,12 @@
     <div class="container">
         <% if (messages.success) { %>
             <div class="alert alert-info" role="alert">
-                <%= messages.success %>    
+                <%- messages.success %>    
             </div>
         <% } %>
         <% if (messages.error) { %>
             <div class="alert alert-danger" role="alert">
-                <%= messages.error %>    
+                <%- messages.error %>    
             </div>
         <% } %>
         <div class="mb-2">
@@ -41,7 +41,7 @@
                             <td><%= data[i].nama_paket_penitipan %></td>
                             <td><%= data[i].keterangan_paket_penitipan %></td>
                             <td><%= data[i].harga_paket_penitipan %></td>
-                            <td><%= data[i].gambar_paket_penitipan %></td>
+                            <td><img src="/images/paket_penitipan/<%= data[i].gambar_paket_penitipan %>" alt="Gambar Paket" width="100"></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="/paket_penitipan/edit/<%= data[i].id_paket_penitipan %>" class="btn btn-sm btn-warning me-1">Edit</a>
@@ -71,7 +71,7 @@
             </table>
         </div>
     </div>
-    <% include('../partials/__foot.ejs') %>
+    <%- include('../partials/__foot.ejs') %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col">
                 <a href="/paket_penitipan" class="btn btn-sm btn-danger mb-3">Kembali</a>
-                <form action="/paket_penitipan/store" method="POST">
+                <form action="/paket_penitipan/store" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="nama_paket_penitipan" class="form-label">Nama Paket:</label>
                         <input type="text" name="nama_paket_penitipan" id="nama_paket_penitipan" class="form-control" placeholder="Nama Paket Penitipan" required>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="gambar_paket_penitipan" class="form-label">Gambar:</label>
-                        <input type="text" name="gambar_paket_penitipan" id="gambar_paket_penitipan" class="form-control" placeholder="URL Gambar Paket Penitipan" required>
+                        <input type="file" name="gambar_paket_penitipan" id="gambar_paket_penitipan" class="form-control-file" accept="image/*" required>
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-sm btn-success">Simpan</button>
